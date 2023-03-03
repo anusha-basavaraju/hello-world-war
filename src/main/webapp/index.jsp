@@ -3,7 +3,7 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Tomcat installed in slave</h1>
+	<h1>CICD pipeline with docker</h1>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
