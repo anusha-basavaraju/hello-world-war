@@ -8,7 +8,7 @@ pipeline {
         stage('Clone Step') {
             steps {
                 sh 'rm -rf hello-world-war'
-                sh 'git clone https://github.com/VandanaVinay/hello-world-war.git'
+                sh 'git clone https://github.com/anusha-basavaraju/hello-world-war.git'
             }
         }
         stage('Build Docker Image') {
@@ -19,8 +19,8 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 withDockerRegistry([ credentialsId: "docker-hub-creds", url:""]) {
-                    sh 'docker tag mvn_docker vandanavinay/mvn_docker:$BUILD_NUMBER'
-                    sh 'docker push vandanavinay/mvn_docker:$BUILD_NUMBER' 
+                    sh 'docker tag mvn_docker anushabasavaraju/mvn_docker:$BUILD_NUMBER'
+                    sh 'docker push anushabasavaraju/mvn_docker:$BUILD_NUMBER' 
                 }
             }
         }
